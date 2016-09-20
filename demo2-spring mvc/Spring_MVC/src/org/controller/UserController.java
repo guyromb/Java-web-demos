@@ -1,4 +1,4 @@
-package org.swinglife.controller;
+package org.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,28 +7,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/***
- * ÓÃ»§¿ØÖÆÆ÷
- * @author swinglife
- *
- */
 @Controller
 public class UserController {
 
 	/***
-	 * ÓÃ»§µÇÂ½
-	 * <p>×¢½âÅäÖÃ£¬Ö»ÔÊĞíPOSTÌá½»µ½¸Ã·½·¨
+	 * ç”¨æˆ·ç™»é™†
+	 * <p>æ³¨è§£é…ç½®ï¼Œåªå…è®¸POSTæäº¤åˆ°è¯¥æ–¹æ³•
 	 * @param username
 	 * @param password
 	 * @return
 	 */
 	@RequestMapping(value="login",method=RequestMethod.POST)
 	public ModelAndView login(String username,String password){
-		//ÑéÖ¤´«µİ¹ıÀ´µÄ²ÎÊıÊÇ·ñÕıÈ·£¬·ñÔò·µ»Øµ½µÇÂ½Ò³Ãæ¡£
+		//éªŒè¯ä¼ é€’è¿‡æ¥çš„å‚æ•°æ˜¯å¦æ­£ç¡®ï¼Œå¦åˆ™è¿”å›åˆ°ç™»é™†é¡µé¢ã€‚
 		if(this.checkParams(new String[]{username,password})){
-			//Ö¸¶¨Òª·µ»ØµÄÒ³ÃæÎªsucc.jsp
+			//æŒ‡å®šè¦è¿”å›çš„é¡µé¢ä¸ºsucc.jsp
 			ModelAndView mav = new ModelAndView("succ");
-			//½«²ÎÊı·µ»Ø¸øÒ³Ãæ
+			//å°†å‚æ•°è¿”å›ç»™é¡µé¢
 			mav.addObject("username",username);
 			mav.addObject("password", password);
 			return mav;
@@ -37,8 +32,8 @@ public class UserController {
 	}
 
 //	/***
-//	 * ÁíÒ»ÖÖ²ÎÊı´«µİµÄĞÎÊ½
-//	 * Í¨¹ırequestÀ´´¦ÀíÇëÇó¹ıÀ´µÄ²ÎÊı¡£
+//	 * å¦ä¸€ç§å‚æ•°ä¼ é€’çš„å½¢å¼
+//	 * é€šè¿‡requestæ¥å¤„ç†è¯·æ±‚è¿‡æ¥çš„å‚æ•°ã€‚
 //	 * @param username
 //	 * @param password
 //	 * @param request
@@ -52,7 +47,7 @@ public class UserController {
 //	}
 	
 	/***
-	 * ÑéÖ¤²ÎÊı
+	 * éªŒè¯å‚æ•°
 	 * @param params
 	 * @return
 	 */

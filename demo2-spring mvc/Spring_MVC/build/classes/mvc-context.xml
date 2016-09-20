@@ -13,7 +13,7 @@
 	<!-- SpringMVC配置 -->
 	
 	<!-- 通过component-scan 让Spring扫描org.swinglife.controller下的所有的类，让Spring的代码注解生效 -->
-	<context:component-scan base-package="org.swinglife.controller"></context:component-scan>
+	<context:component-scan base-package="org.controller"></context:component-scan>
 	
 	<!-- 配置SpringMVC的视图渲染器， 让其前缀为:/ 后缀为.jsp  将视图渲染到/page/<method返回值>.jsp中 -->
 	<beans:bean
