@@ -4,3 +4,5 @@ spring-framework-3.2.4.RELEASE-dist.zip
 
 commons-logging-1.2-bin.zip
 
+下载地址：http://repo.springsource.org/libs-release-local/org/springframework/spring/
+
