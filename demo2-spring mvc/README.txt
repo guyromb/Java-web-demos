@@ -55,3 +55,5 @@ SpringTest\WebContent\WEB-INF\lib目录下需要放入如下的包(解压将其�
 2016/09/17  19:38           877,630 spring-webmvc-4.2.6.RELEASE.jar
 2016/09/17  19:38           427,823 xmemcached-1.3.8.jar
 2016/09/17  19:38         2,666,695 xmlbeans-2.3.0.jar
+
+参考：http://blog.csdn.net/swingpyzf/article/details/8904205

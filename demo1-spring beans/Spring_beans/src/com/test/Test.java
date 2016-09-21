@@ -14,5 +14,6 @@ public class Test {
         //创建Animal的引用对象
         Animal a = ctx.getBean("animal",Animal.class);
         a.info();
+        ((ClassPathXmlApplicationContext) ctx).close();
     }
 }
