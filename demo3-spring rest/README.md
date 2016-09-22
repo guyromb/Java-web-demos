@@ -1,0 +1,3 @@
+WebContent\WEB-INF\lib目录下同demo2
+
+JSP前后端分离调用REST接口

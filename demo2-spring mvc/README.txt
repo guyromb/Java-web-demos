@@ -1,4 +1,6 @@
-SpringTest\WebContent\WEB-INF\lib目录下需要放入如下的包(解压将其中的jar直接放入):
+﻿MVC，JSP前后端不分离
+
+WebContent\WEB-INF\lib目录下需要放入如下的包(解压将其中的jar直接放入):
 
 2016/09/17  19:38         1,146,246 activemq-broker-5.13.0.jar
 2016/09/17  19:38         1,295,143 activemq-client-5.13.0.jar
