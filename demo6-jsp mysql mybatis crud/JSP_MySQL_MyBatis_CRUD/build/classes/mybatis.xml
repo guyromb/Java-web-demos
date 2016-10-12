@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="org.dao.StudentDao">
+   
+    <!--查询所有记录-->
+    <select id="queryAll" resultType="org.entity.Student">
+    	select * from newstudent2 
+    </select>
+
+    <!--插入一条记录-->
+    <insert id="addOne" parameterType="org.entity.Student">
+    	insert into newstudent2 (id,name,phone) values (#{id},#{name},#{phone}) 
+    </insert>
+    
+    <!--修改一条记录  -->  
+    <update id="updateOne" parameterType="org.entity.Student">   
+        update newstudent2 set name = #{name},phone = #{phone} where id = #{id} 
+    </update>
+    
+    <!--删除一条记录  -->  
+    <delete id="deleteOne" parameterType="int">  
+       delete from newstudent2 where id = #{id}  
+    </delete>
+
+</mapper>
