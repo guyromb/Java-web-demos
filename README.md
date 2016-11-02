@@ -12,3 +12,5 @@
 
 6.demo6-jsp mysql mybatis crud ====> 使用Spring和MyBatis实现MySQL中数据的增删改查;
 
+7.demo7-mybatis crud console ====> 添加基本控制台，配置微信热门活动；
+
