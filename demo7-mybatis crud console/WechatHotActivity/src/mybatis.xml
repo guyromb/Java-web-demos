@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="org.dao.HotActivityDao">
+
+	<resultMap type="org.entity.HotActivity" id="hotActivity">
+    	<result column="SEQ_ID" property="seqId"/>
+    	<result column="ACTIVITY_TITLE" property="activityTitle"/>
+    	<result column="ACTIVITY_LINK" property="activityLink"/>
+    	<result column="ACTIVITY_SEQ" property="activitySeq"/>
+    	<result column="REC_ST" property="recSt"/>
+  	</resultMap>
+
+
+   
+    <!--查询所有记录-->
+    <select id="queryAll" resultMap="hotActivity">
+    	select * from tbl_kfmms_hot_activity_inf where REC_ST="00" order by ACTIVITY_SEQ ASC limit 5
+    </select>
+
+    <!--插入一条记录-->
+    <insert id="addOne" parameterType="org.entity.HotActivity">
+    	insert into tbl_kfmms_hot_activity_inf (ACTIVITY_TITLE,ACTIVITY_LINK,ACTIVITY_SEQ,REC_ST) values (#{activityTitle},#{activityLink},#{activitySeq},"00") 
+    </insert>
+    
+    <!--修改一条记录  -->  
+    <update id="updateOne" parameterType="org.entity.HotActivity">   
+        update tbl_kfmms_hot_activity_inf set ACTIVITY_TITLE = #{activityTitle},ACTIVITY_LINK = #{activityLink},ACTIVITY_SEQ = #{activitySeq} where SEQ_ID = #{seqId} 
+    </update>
+    
+    <!--删除一条记录 (软删除) -->
+    <update id="deleteOne" parameterType="org.entity.HotActivity">   
+        update tbl_kfmms_hot_activity_inf set REC_ST = "01" where SEQ_ID = #{seqId} 
+    </update>
+    
+</mapper>
